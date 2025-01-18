@@ -161,10 +161,10 @@ public class NetdUtils {
         netd.tetherInterfaceAdd(iface);
         networkAddInterface(netd, iface, maxAttempts, pollingIntervalMs);
         // Activate a route to dest and IPv6 link local.
-        modifyRoute(netd, ModifyOperation.ADD, INetd.LOCAL_NET_ID,
-                new RouteInfo(dest, null, iface, RTN_UNICAST));
-        modifyRoute(netd, ModifyOperation.ADD, INetd.LOCAL_NET_ID,
-                new RouteInfo(new IpPrefix("fe80::/64"), null, iface, RTN_UNICAST));
+        // modifyRoute(netd, ModifyOperation.ADD, INetd.LOCAL_NET_ID,
+        //        new RouteInfo(dest, null, iface, RTN_UNICAST));
+        // modifyRoute(netd, ModifyOperation.ADD, INetd.LOCAL_NET_ID,
+        //        new RouteInfo(new IpPrefix("fe80::/64"), null, iface, RTN_UNICAST));
     }
 
     /**
